@@ -75,7 +75,22 @@ public class PracticeApp {
                 .findAny();
         milan.ifPresent(System.out::println);
 
-        //6.
+        //6.打印生活在剑桥的交易员的所有交易额
+        Integer cambridge = transactions.parallelStream()
+                .filter(t -> t.getTrader().getCity().equalsIgnoreCase("Cambridge"))
+                .map(Transaction::getValue)
+                .reduce(0, Integer::sum); //简洁写法，代替了.reduce(0, (a, b) -> a + b)
+        System.out.println(cambridge);
+
+        //7.所有交易中最高交易额
+        Optional<Integer> maxTrnsactionValue = transactions.parallelStream()
+                .map(Transaction::getValue)
+                .reduce(Integer::max);
+        maxTrnsactionValue.ifPresent(System.out::println);
+
+        //8.找到交易额最小的交易
+        Optional<Transaction> minTranction = transactions.parallelStream().reduce((a, b) -> a.getValue() > b.getValue() ? b : a);
+        minTranction.ifPresent(System.out::println);
     }
 
     private static <T> void systemLog(List<T> collect) {
