@@ -51,15 +51,6 @@
         </dependency>
 
         <!-- 日志SLF4J和LogBack -->
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
@@ -70,11 +61,12 @@
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
+            <artifactId>logback-access</artifactId>
         </dependency>
+        <!-- logback-classic包含了slf4j-api.jar,logback-core.jar及logback-classic.jar -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-access</artifactId>
+            <artifactId>logback-classic</artifactId>
         </dependency>
 
         <!-- JackSon -->
