@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>houzm.game.jdk8</groupId>
         <artifactId>jdk8-accumulation-parent</artifactId>
+        <groupId>houzm.game.jdk8</groupId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../jdk8-accumulation-parent/pom.xml</relativePath>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
+
     <groupId>houzm.game.jdk8</groupId>
-    <artifactId>jdk8-accumulation-press</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>jdk8-accumulation-collection</artifactId>
 
     <dependencies>
         <dependency>
@@ -19,19 +19,5 @@
             <artifactId>jdk8-accumulation-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.lz4/lz4-java -->
-        <dependency>
-            <groupId>org.lz4</groupId>
-            <artifactId>lz4-java</artifactId>
-            <version>1.5.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.lz4/lz4-java -->
-        <dependency>
-            <groupId>org.lz4</groupId>
-            <artifactId>lz4-java</artifactId>
-            <version>1.5.0</version>
-        </dependency>
-
     </dependencies>
-    
 </project>

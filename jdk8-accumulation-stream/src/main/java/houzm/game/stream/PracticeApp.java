@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * 付诸实践
@@ -91,6 +91,7 @@ public class PracticeApp {
         //8.找到交易额最小的交易
         Optional<Transaction> minTranction = transactions.parallelStream().reduce((a, b) -> a.getValue() > b.getValue() ? b : a);
         minTranction.ifPresent(System.out::println);
+
     }
 
     private static <T> void systemLog(List<T> collect) {

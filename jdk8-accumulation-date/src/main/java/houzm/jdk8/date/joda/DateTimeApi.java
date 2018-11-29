@@ -1,5 +1,6 @@
 package houzm.jdk8.date.joda;
 
+import java.util.Date;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeField;
 import org.joda.time.DateTimeFieldType;
@@ -34,8 +35,10 @@ public class DateTimeApi {
         logger.debug("{}", dateTime.getMonthOfYear()); //288
         logger.debug("{}", dateTime.getDayOfMonth()); //288
 
-        logger.debug("当天凌晨时间：{}", new DateTime(dateTime.getMillis()-dateTime.getMillisOfDay())); //288
-        logger.debug("明天凌晨时间：{}", new DateTime(dateTime.getMillis()-dateTime.getMillisOfDay()).plusDays(1)); //288
+        logger.debug("当天凌晨时间：{}", new DateTime(dateTime.getMillis()-dateTime.getMillisOfDay())); //2018-11-13T00:00:00.000+08:00
+        logger.debug("明天凌晨时间：{}", new DateTime(dateTime.getMillis()-dateTime.getMillisOfDay()).plusDays(1)); //2018-11-14T00:00:00.000+08:00
 
+        //date-datetime
+        logger.debug("date to datetime : {}", new DateTime(new Date()));
     }
 }
